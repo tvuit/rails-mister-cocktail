@@ -1,15 +1,129 @@
 .card {
+  max-width: 400px;
   background: white;
   margin-bottom: 30px;
-  border-radius: 4px;                         /* Small radius */
-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-border: 1px solid rgba(0, 0, 0, 0.1);       /* OR subtle border */
+  border-radius: 8px;                         /* Small radius */
+// box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+// border: 0.5px solid rgba(0, 0, 0, 0.1);       /* OR subtle border */
 }
 .card-header {
   height: 200px;
   background-size: cover;
-}
-.card-body {
-  padding: 20px;
   border-radius: 5px;
 }
+.card-body {
+  padding: 7px;
+  border-radius: 5px;
+  border-top: 0.5px solid grey;
+  color: black;
+  text-align: right;
+  font-family: 'Open Sans', sans-serif;;
+}
+
+a {
+   color: black;
+  text-align: right;
+  font-family: 'Open Sans', sans-serif;
+}
+
+a:hover {
+  text-decoration: none;
+}
+.wrapper {
+  position: fixed;
+  height: 90vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  background-image: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// .recipe body{
+//   font-family:arial,sans-serif;
+//   font-size:100%;
+//   margin:3em;
+//   background:#666;
+//   color:#fff;
+// }
+// .recipe h2,p{
+//   font-size:100%;
+//   font-weight:normal;
+// }
+// .recipe ul,li{
+//   list-style:none;
+// }
+// .recipe ul{
+//   overflow:hidden;
+//   padding:3em;
+// }
+// .recipe ul li a{
+//   text-decoration:none;
+//   color:#000;
+//   background:#ffc;
+//   display:block;
+//   height:10em;
+//   width:10em;
+//   padding:1em;
+//   -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
+//   -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+//   box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+//   -moz-transition:-moz-transform .15s linear;
+//   -o-transition:-o-transform .15s linear;
+//   -webkit-transition:-webkit-transform .15s linear;
+// }
+// .recipe ul li{
+//   margin:1em;
+//   float:left;
+// }
+// .recipe ul li h2{
+//   font-size:140%;
+//   font-weight:bold;
+//   padding-bottom:10px;
+// }
+// .recipe ul li p{
+//   font-family:"Reenie Beanie",arial,sans-serif;
+//   font-size:180%;
+// }
+// .recipe ul li a{
+//   -webkit-transform: rotate(-6deg);
+//   -o-transform: rotate(-6deg);
+//   -moz-transform:rotate(-6deg);
+// }
+// .recipe ul li:nth-child(even) a{
+//   -o-transform:rotate(4deg);
+//   -webkit-transform:rotate(4deg);
+//   -moz-transform:rotate(4deg);
+//   position:relative;
+//   top:5px;
+//   background:#cfc;
+// }
+// .recipe ul li:nth-child(3n) a{
+//   -o-transform:rotate(-3deg);
+//   -webkit-transform:rotate(-3deg);
+//   -moz-transform:rotate(-3deg);
+//   position:relative;
+//   top:-5px;
+//   background:#ccf;
+// }
+// .recipe ul li:nth-child(5n) a{
+//   -o-transform:rotate(5deg);
+//   -webkit-transform:rotate(5deg);
+//   -moz-transform:rotate(5deg);
+//   position:relative;
+//   top:-10px;
+// }
+// .recipe ul li a:hover,ul li a:focus{
+//   box-shadow:10px 10px 7px rgba(0,0,0,.7);
+//   -moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
+//   -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+//   -webkit-transform: scale(1.25);
+//   -moz-transform: scale(1.25);
+//   -o-transform: scale(1.25);
+//   position:relative;
+//   z-index:5;
+// }
+// .recipe ol{text-align:center;}
+// .recipe ol li{display:inline;padding-right:1em;}
+// .recipe ol li a{color:#fff;}

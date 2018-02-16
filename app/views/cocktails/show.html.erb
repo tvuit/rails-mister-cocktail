@@ -1,11 +1,34 @@
-<h1><%= @cocktail.name %></h1>
-
-<% @cocktail.doses.each do |dose| %>
-<%= dose.description %> | <%= link_to "delete ingredient", dose_path(dose.id),
-  method: :delete,
-  data: { confirm: "Are you sure?" } %>
-<<% end %>
-<%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail)  %>
+<div class="container" style="display: flex;">
 
 
-<%= link_to "Get back", cocktails_path  %>
+
+
+<div class="card" style="margin-top: 70px; flex: 1 0 auto; align-items: center; justify-content: space-between;">
+  <div class="card-header" style="background-image: url('<%= image_path @cocktail.photo %>')">
+            </div>
+    <div class="card-body">
+    <h1><%= @cocktail.name %></h1>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="recipe" style="flex: 0 0 auto; margin-top: 150px; align-items: center; justify-content: space-between;">
+
+  <ul>
+  <h2><%= @cocktail.name %></h2>
+  <% @cocktail.doses.each do |dose| %>
+  <li><%= dose.description %> <%= dose.ingredient.name %></li>
+  <%= link_to "delete ingredient", dose_path(dose.id),
+    method: :delete,
+    data: { confirm: "Are you sure?" } %>
+  <% end %>
+  <%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail)  %>
+
+</div>
+<!--   <%= link_to "Get back", cocktails_path  %>
+ -->
+</div>

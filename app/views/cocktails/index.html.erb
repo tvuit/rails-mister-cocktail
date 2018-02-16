@@ -1,19 +1,20 @@
-<h1>our cocktails</h1>
- <div class="container" style="display:flex; justify-content: space-around; margin-bottom: 20px;">
-<%= link_to "Create a new cocktail", new_cocktail_path, class: "btn btn-info"  %>
-</div>
+<div class="wraper" style="background-image: linear-gradient(-225deg, rgba(0,45,168,0.6) 0%, rgba(0,36,61,0.6) 10%), url('https://images.pexels.com/photos/162480/glasses-ice-cubes-illuminated-drink-162480.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb');">
 
+ <div class="hcontainer" style="color:white; padding-top: 100px; padding-bottom: 100px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+<img src="https://media.giphy.com/media/3o7TKDhgKC52OZhV0k/giphy.gif" style="border-radius: 80%; width:400px";>
+<h1>Mister Cocktail</h1>
+</div>
 
 <div class="container">
   <div class="row">
     <% @cocktails.each do |cocktail| %>
-      <div class="col-xs-12 col-sm-4">
+      <div class="col-xs-12 col-sm-4" >
         <div class="card text-center">
           <% if cocktail.photo %>
             <div class="card-header" style="background-image: url('<%= image_path cocktail.photo %>')">
             </div>
           <% else %>
-            <div class="card-header" style="background-image: url('<%= image_path 'bottle.jpg' %>')">
+            <div class="card-header" style="background-image: url('<%= image_tag_path 'bottle.jpg'%>')">
             </div>
             <% end %>
           <div class="card-body">
@@ -25,4 +26,7 @@
   </div>
 </div>
 
-
+</div>
+ <div class="container" style="display:flex; justify-content: space-around; margin-top: 60px; margin-bottom: 60px;">
+<%= link_to "Create a new cocktail", new_cocktail_path, class: "btn btn-warning"  %>
+</div>

@@ -10,7 +10,6 @@
 console.log('Hello World from Webpacker')
 // app/assets/javascripts/application.js
 
-//= require jquery
-//= require jquery_ujs
-//= require bootstrap-sprockets
-//= require_tree .
+import { Roll } from "../components/roll";
+
+Roll();
