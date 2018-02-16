@@ -1,0 +1,38 @@
+@import "compass/css3";
+
+@import url(https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise);
+
+.recipe {
+ margin:0;
+ padding:0;
+ position:relative;
+}
+
+.recipe body {
+ font-family: 'Waiting for the Sunrise', cursive;
+}
+
+.recipe ::selection {
+  background:#222;
+  color:yellow;
+}
+
+.recipe .wrapper {
+  width:500px;
+  height:500px;
+  margin:20px auto;
+}
+.recipe .paper {
+  margin-top:50px;
+  line-height:1.5em;
+  background-image: -webkit-linear-gradient(rgba(0,0,0,0.1) 1px, transparent 1px);
+  background-image: -moz-linear-gradient(rgba(0,0,0,0.1) 1px, transparent 1px);
+  background-image: -ms-linear-gradient(rgba(0,0,0,0.1) 1px, transparent 1px);
+  background-size:100% 1.5em;
+  background-position:0 1.2em;
+  background-origin:content-box;
+  background-color:rgba(yellow,.5);
+  font-size:140%;
+  padding:1.3em;
+  box-shadow:0px 0px 10px rgba(black,.3);
+}
