@@ -3,13 +3,19 @@
 <%= link_to "Create a new cocktail", new_cocktail_path, class: "btn btn-info"  %>
 </div>
 
+
 <div class="container">
   <div class="row">
     <% @cocktails.each do |cocktail| %>
       <div class="col-xs-12 col-sm-4">
         <div class="card text-center">
-            <div class="card-header" style="background-image: url('https://images.pexels.com/photos/605408/pexels-photo-605408.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb')">
+          <% if cocktail.photo %>
+            <div class="card-header" style="background-image: url('<%= image_path cocktail.photo %>')">
             </div>
+          <% else %>
+            <div class="card-header" style="background-image: url('<%= image_path 'bottle.jpg' %>')">
+            </div>
+            <% end %>
           <div class="card-body">
             <%= link_to cocktail.name, cocktail_path(cocktail) %>
           </div>
